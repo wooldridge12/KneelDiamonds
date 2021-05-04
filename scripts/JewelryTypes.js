@@ -27,9 +27,9 @@ export const JewelryTypes = () => {
     html += "</ul>"
     return html
 }
-
-const multiply = () => {
-    const a = Orders()
+//Figure out how to times a function by 4 and 2.
+ export const multiplyNecklace = (a, b) => {
+  return  a * b
 }
 
 // function multiply()
