@@ -1,6 +1,5 @@
 // import, and pull data to make if else statements working for * prices.
 import { getTypes, setType} from "./database.js"
-import { Orders} from "./Orders.js"
 
 
 const types = getTypes()
@@ -27,20 +26,3 @@ export const JewelryTypes = () => {
     html += "</ul>"
     return html
 }
-
-const multiply = () => {
-    const a = Orders()
-}
-
-// function multiply()
-// {
-//     // Get the input values
-//     a = Number(document.getElementById(foundMetal.price + foundSize.price + foundStyle.price).value);
-//     b = Number(document.getElementById(2).value);
-
-//     // Do the multiplication
-//     c = a*b;
-
-//     // Set the value of the total
-//     document.getElementById("total").value=c;
-// }
