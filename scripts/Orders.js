@@ -1,4 +1,8 @@
+
 import { getOrders, getMetals, getSizes, getStyles, getTypes } from "./database.js"
+import { getOrders, getMetals, getSizes, getStyles } from "./database.js"
+import { multiplyNecklace } from "./JewelryTypes.js"
+
 
 const metals = getMetals()
 const sizes = getSizes()
@@ -66,7 +70,6 @@ export const Orders = () => {
     let html = "<ul>"
 
     const listItems = orders.map(buildOrderListItem)
-
 
 
     html += listItems.join("")

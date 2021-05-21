@@ -26,3 +26,22 @@ export const JewelryTypes = () => {
     html += "</ul>"
     return html
 }
+
+//Figure out how to times a function by 4 and 2.
+ export const multiplyNecklace = (a, b) => {
+  return  a * b
+}
+
+// function multiply()
+// {
+//     // Get the input values
+//     a = Number(document.getElementById(foundMetal.price + foundSize.price + foundStyle.price).value);
+//     b = Number(document.getElementById(2).value);
+
+//     // Do the multiplication
+//     c = a*b;
+
+//     // Set the value of the total
+//     document.getElementById("total").value=c;
+// }
+
