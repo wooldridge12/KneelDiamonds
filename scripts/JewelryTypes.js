@@ -1,6 +1,5 @@
 // import, and pull data to make if else statements working for * prices.
 import { getTypes, setType} from "./database.js"
-import { Orders} from "./Orders.js"
 
 
 const types = getTypes()
@@ -27,6 +26,7 @@ export const JewelryTypes = () => {
     html += "</ul>"
     return html
 }
+
 //Figure out how to times a function by 4 and 2.
  export const multiplyNecklace = (a, b) => {
   return  a * b
@@ -44,3 +44,4 @@ export const JewelryTypes = () => {
 //     // Set the value of the total
 //     document.getElementById("total").value=c;
 // }
+

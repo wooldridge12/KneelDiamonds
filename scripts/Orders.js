@@ -1,9 +1,13 @@
+
+import { getOrders, getMetals, getSizes, getStyles, getTypes } from "./database.js"
 import { getOrders, getMetals, getSizes, getStyles } from "./database.js"
 import { multiplyNecklace } from "./JewelryTypes.js"
+
 
 const metals = getMetals()
 const sizes = getSizes()
 const styles = getStyles()
+const types = getTypes()
 
 
 const buildOrderListItem = (order) => {
@@ -31,8 +35,23 @@ const buildOrderListItem = (order) => {
             }
         }
     )
+    const foundType = types.find(
+        (type) => {
+            if (type.id === order.typeId) {
+                return true
+            }
+        }
+    )
     //combining prices (+) total cost is = to all prices. 
-    const totalCost = (foundMetal.price + foundSize.price + foundStyle.price)
+    let totalCost = (foundMetal.price + foundSize.price + foundStyle.price)
+    //if statement to multiply total cost by type (remember the foundType.id the .id)
+        if ( foundType.id === 1 ) {
+            totalCost
+        } else if ( foundType.id === 2 ) {
+            totalCost *= 2
+        } else if ( foundType.id === 3 ) {
+            totalCost *= 4
+        }
     //returning order.id and totalCost (the .toFixed(2) method is used to fix the look of currency.)
     return `<li>
         Order #${order.id} cost $${totalCost.toFixed(2)}
